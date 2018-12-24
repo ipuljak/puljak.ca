@@ -1,0 +1,48 @@
+@import "Variables";
+
+.sidebar-icon-open {
+  font-size: 35px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.sidebar-icon-open:hover {
+  color: black;
+}
+
+.sidebar-icon-close {
+  font-size: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #F5F5F5;
+  cursor: pointer;
+}
+
+.sidebar-icon-close:hover {
+  color: white;
+}
+
+.sidebar {
+  position: fixed;
+  overflow-y: hidden;
+  top: 0;
+  z-index: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #4D4D4D;
+  -webkit-transition: left 0.5s;
+  -moz-transition: left 0.5s;
+  transition: left 0.5s;
+
+  @media screen and (max-width: $medium-break) {
+    width: 100%;
+  }
+}
+
+.sidebar-open {
+  left: 0;
+}

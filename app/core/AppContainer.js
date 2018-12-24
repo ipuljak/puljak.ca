@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import Main from "Core/Main";
+import Sidebar from "Layout/Sidebar/Sidebar";
 import Layout from 'Styles/Layout.scss';
 
 class AppContainer extends Component {
@@ -7,7 +9,12 @@ class AppContainer extends Component {
     }
 
     render() {
-        return <div>App Container component</div>;
+        return (
+            <div>
+                <Sidebar/>
+                <Main/>
+            </div>
+        )
     }
 }
 
