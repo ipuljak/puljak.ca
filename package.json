@@ -2,9 +2,9 @@
   "name": "puljak.ca",
   "version": "1.0.0",
   "description": "puljak.ca - personal website code repository",
-  "main": "./src/index.js",
+  "main": "./app/index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot --port 9001",
+    "start": "webpack-dev-server --mode development --open --hot --port 63344",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -34,8 +34,11 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.13"
+    "webpack-dev-server": "^3.1.9"
   }
 }
