@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import AppConstants from "Constants/AppConstants";
 
 class Bio extends Component {
     constructor(props) {
@@ -7,7 +8,7 @@ class Bio extends Component {
 
     render() {
         return (
-            <section className="section">
+            <section className="section" id={AppConstants.SECTIONS.BIO.ID}>
                 <div>
                     This is the Bio section.
                 </div>

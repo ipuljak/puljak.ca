@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import AppConstants from "Constants/AppConstants";
 
 class Photos extends Component {
     constructor(props) {
@@ -7,7 +8,7 @@ class Photos extends Component {
 
     render() {
         return (
-            <section className="section">
+            <section className="section" id={AppConstants.SECTIONS.PHOTOS.ID}>
                 <div>
                     This is the Photos section.
                 </div>

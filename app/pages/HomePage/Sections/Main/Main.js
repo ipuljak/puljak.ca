@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import AppConstants from "Constants/AppConstants";
 
 class Main extends Component {
     constructor(props) {
@@ -7,7 +8,7 @@ class Main extends Component {
 
     render() {
         return (
-            <section className="section">
+            <section className="section" id={AppConstants.SECTIONS.MAIN.ID}>
                 <div>
                     This is the Main section.
                 </div>

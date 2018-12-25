@@ -1,13 +1,14 @@
 import React, {Component} from "react";
 import {boundMethod} from "autobind-decorator";
+import AppConstants from "Constants/AppConstants";
 import "Styles/Sidebar.scss";
 
 /**
  * Sidebar navigation for all user interfaces
  */
 class Sidebar extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             visible: false
@@ -57,15 +58,34 @@ class Sidebar extends Component {
      * @returns {*}
      */
     renderSidebarItems() {
-        return (
-            <ul>
-                <li>Top</li>
-                <li>Bio</li>
-                <li>Resume</li>
-                <li>Projects</li>
-                <li>Photos</li>
-            </ul>
-        )
+        const sections = [
+            {
+                id: AppConstants.SECTIONS.MAIN.ID,
+                name: AppConstants.SECTIONS.MAIN.NAME
+            },
+            {
+                id: AppConstants.SECTIONS.BIO.ID,
+                name: AppConstants.SECTIONS.BIO.NAME
+            },
+            {
+                id: AppConstants.SECTIONS.RESUME.ID,
+                name: AppConstants.SECTIONS.RESUME.NAME
+            },
+            {
+                id: AppConstants.SECTIONS.PROJECTS.ID,
+                name: AppConstants.SECTIONS.PROJECTS.NAME
+            },
+            {
+                id: AppConstants.SECTIONS.PHOTOS.ID,
+                name: AppConstants.SECTIONS.PHOTOS.NAME
+            }
+        ];
+
+        const listItems = sections.map((section, index) => {
+            return <li key={index} onClick={() => this.scrollToSection(section.id)}>{section.name}</li>;
+        });
+
+        return <ul>{listItems}</ul>;
     }
 
     /**
@@ -98,6 +118,22 @@ class Sidebar extends Component {
                 this.toggleSidebar();
             }
         });
+    }
+
+    /**
+     * Scroll to the selected element on the page
+     * @param section
+     */
+    scrollToSection(section) {
+        const element = document.getElementById(section);
+
+        if (element) {
+            element.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        this.toggleSidebar();
     }
 }
 
