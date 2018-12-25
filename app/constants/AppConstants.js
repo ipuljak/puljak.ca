@@ -3,6 +3,10 @@ const AppConstants = {
         TITLE: "Ivan Puljak - Software Developer"
     },
 
+    PROFILE: {
+        NAME: "Ivan Puljak"
+    },
+
     SECTIONS: {
         MAIN: {
             ID: "section-main",

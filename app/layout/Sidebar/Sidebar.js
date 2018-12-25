@@ -82,10 +82,21 @@ class Sidebar extends Component {
         ];
 
         const listItems = sections.map((section, index) => {
-            return <li key={index} onClick={() => this.scrollToSection(section.id)}>{section.name}</li>;
+            return (
+                <li key={index} onClick={() => this.scrollToSection(section.id)}>
+                    <span className="sidebar-list-item">{section.name}</span>
+                </li>
+            )
         });
 
-        return <ul>{listItems}</ul>;
+        return (
+            <ul className="sidebar-nav">
+                <li onClick={() => this.scrollToSection(AppConstants.SECTIONS.MAIN.ID)} className="sidebar-brand">
+                    {AppConstants.PROFILE.NAME}
+                </li>
+                {listItems}
+            </ul>
+        )
     }
 
     /**
