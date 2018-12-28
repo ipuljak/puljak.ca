@@ -91,9 +91,9 @@ class Sidebar extends Component {
 
         return (
             <ul className="sidebar-nav">
-                <li onClick={() => this.scrollToSection(AppConstants.SECTIONS.MAIN.ID)} className="sidebar-brand">
+                <div onClick={() => this.scrollToSection(AppConstants.SECTIONS.MAIN.ID)} className="sidebar-brand">
                     {AppConstants.PROFILE.NAME}
-                </li>
+                </div>
                 {listItems}
             </ul>
         )

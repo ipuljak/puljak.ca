@@ -60,7 +60,12 @@ typings/
 # next.js build output
 .next
 
+# puljak.ca Folders
 .idea/
 dist/
 public/
+images/
+
+# puljak.ca Files
 package-lock.json
+app/constants/PhotoData.js

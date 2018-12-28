@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import AppConstants from "Constants/AppConstants";
+import PhotoData from "Constants/PhotoData";
+import PhotoCover from "Pages/HomePage/Sections/Photos/Fragments/PhotoCover";
 
 class Photos extends Component {
     constructor(props) {
@@ -9,11 +11,18 @@ class Photos extends Component {
     render() {
         return (
             <section className="section" id={AppConstants.SECTIONS.PHOTOS.ID}>
-                <div>
-                    This is the Photos section.
-                </div>
+                <div className="section-title">Photographs</div>
+                <div className="section-album-container">{this.renderPhotoCovers()}</div>
             </section>
         )
+    }
+
+    /**
+     * Render each of the album covers
+     * @returns {*[]}
+     */
+    renderPhotoCovers() {
+        return PhotoData.map(album => <PhotoCover album={album} />);
     }
 }
 
