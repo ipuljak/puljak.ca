@@ -25,14 +25,16 @@
 // PHOTOS
 
 .section-album-container {
-  margin: 0 auto;
-  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
   .section-album {
-    max-width: 550px;
+    width: 550px;
     border: 1px solid lightgrey;
     border-radius: 3px;
-    margin: 50px auto;
+    margin: 25px;
     padding: 3px;
     cursor: pointer;
 
