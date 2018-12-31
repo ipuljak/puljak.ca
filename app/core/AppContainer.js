@@ -9,12 +9,10 @@ class AppContainer extends Component {
     }
 
     render() {
-        return (
-            <div>
-                <Sidebar/>
-                <Main/>
-            </div>
-        )
+        return [
+            <Sidebar key="sidebar" />,
+            <Main key="main" />
+        ]
     }
 }
 

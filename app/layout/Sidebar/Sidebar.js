@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {boundMethod} from "autobind-decorator";
 import AppConstants from "Constants/AppConstants";
+import History from "Core/History";
 import "Styles/Sidebar.scss";
 
 /**
@@ -33,9 +34,27 @@ class Sidebar extends Component {
      * @returns {*}
      */
     renderSidebarOpenIcon() {
-        if (!this.state.visible) {
+        return History.location.pathname === AppConstants.ROUTES.DEFAULT ?
+            this.renderHomeSidebarIcon() :
+            this.renderBackIcon();
+    }
+
+    /**
+     * Render the sidebar icon for the Home Page
+     * @returns {*}
+     */
+    renderHomeSidebarIcon() {
+        if (!this.state.visible ) {
             return <i className="fas fa-bars sidebar-icon-open" onClick={this.toggleSidebar} />;
         }
+    }
+
+    /**
+     * Render the back icon
+     * @returns {*}
+     */
+    renderBackIcon() {
+        return <i className="fas fa-chevron-left sidebar-icon-open" onClick={() => History.push(AppConstants.ROUTES.DEFAULT)} />;
     }
 
     /**

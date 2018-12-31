@@ -3,6 +3,8 @@ import History from "Core/History";
 import AppConstants from "Constants/AppConstants";
 import PhotoData from "Constants/PhotoData";
 import Jumbotron from "Layout/Jumbotron";
+import Gallery from "Pages/GalleryPage/Gallery";
+import "Styles/Gallery.scss";
 
 class GalleryPage extends Component {
     constructor() {
@@ -32,6 +34,7 @@ class GalleryPage extends Component {
             return (
                 <div className="gallery-page">
                     <Jumbotron config={jumbotronConfig} />
+                    <Gallery album={album} />
                 </div>
             )
         }

@@ -9,3 +9,35 @@ body {
 .main-container {
   width: 100%;
 }
+
+.jumbotron {
+  color: $light-font-color;
+  text-align: right;
+  padding: 0 10%;
+
+  .jumbotron-title {
+    font-size: 40px;
+    padding: 75px 50px 25px 50px;
+  }
+
+  .jumbotron-description {
+    display: inline-block;
+    max-width: 600px;
+    font-size: 16px;
+    padding: 0 50px;
+  }
+
+  @media only screen and (max-width: $small-break) {
+    padding: 0;
+
+    .jumbotron-title {
+      font-size: 20px;
+      //padding: 25px;
+    }
+
+    .jumbotron-description {
+      display: inline-block;
+      font-size: 12px;
+    }
+  }
+}
