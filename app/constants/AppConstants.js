@@ -32,6 +32,10 @@ const AppConstants = {
             ID: "section-photos",
             NAME: "Photos"
         }
+    },
+
+    ROUTES: {
+        DEFAULT: "/"
     }
 };
 
