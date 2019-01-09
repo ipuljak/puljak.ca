@@ -22,7 +22,7 @@ class Photos extends Component {
      * @returns {*[]}
      */
     renderPhotoCovers() {
-        return PhotoData.map((album, index) => <PhotoCover key={index} album={album} />);
+        return PhotoData.albums.map((album, index) => <PhotoCover key={index} album={album} />);
     }
 }
 

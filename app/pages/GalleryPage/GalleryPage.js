@@ -23,7 +23,7 @@ class GalleryPage extends Component {
 
     render() {
         const albumId = this.props.match.params.album;
-        const album = PhotoData.find(album => album.id === albumId);
+        const album = PhotoData.albums.find(album => album.id === albumId);
 
         if (album) {
             const jumbotronConfig = {

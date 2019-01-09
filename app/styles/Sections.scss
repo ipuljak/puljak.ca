@@ -21,6 +21,23 @@
   background-color: whitesmoke;
 }
 
+// MAIN
+
+#section-main {
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  height: 100vh;
+}
+
+// RESUME
+
+.section-resume-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
 
 // PHOTOS
 
@@ -68,14 +85,4 @@
       }
     }
   }
-}
-
-// RESUME
-
-.section-resume-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 50px;
-
 }
