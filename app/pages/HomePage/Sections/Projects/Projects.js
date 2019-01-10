@@ -10,7 +10,7 @@ class Projects extends Component {
         return (
             <section className="section" id={AppConstants.SECTIONS.PROJECTS.ID}>
                 <div>
-                    This is the Projects section.
+                    This is the Projects section. - Work in progress!
                 </div>
             </section>
         )

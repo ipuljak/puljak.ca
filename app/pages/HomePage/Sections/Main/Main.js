@@ -24,18 +24,16 @@ class Main extends Component {
      */
     _renderTitle() {
         return (
-            <div>
-                <div>Ivan</div>
-                <div>Puljak</div>
-                <div>Software Developer</div>
+            <div className="main-heading">
+                <span className="main-heading-name">{Main.Constants.NAME}</span>
+                <span className="main-heading-title">{Main.Constants.TITLE}</span>
             </div>
         )
     }
 }
 
 Main.Constants = {
-    FIRST_NAME: "Ivan",
-    LAST_NAME: "Puljak",
+    NAME: "Ivan Puljak",
     TITLE: "Software Developer"
 };
 

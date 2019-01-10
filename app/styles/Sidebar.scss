@@ -13,13 +13,14 @@ $sidebar-item-background-4: lighten($sidebar-item-background-3, 3%);
 $sidebar-item-background-5: lighten($sidebar-item-background-4, 3%);
 
 .sidebar-icon-open {
-  font-size: 35px;
+  font-size: 40px;
   position: fixed;
   top: 20px;
   left: 20px;
   cursor: pointer;
   z-index: 1;
   color: white;
+  -webkit-text-stroke: 1px gray;
 }
 
 .sidebar-icon-open:hover {
