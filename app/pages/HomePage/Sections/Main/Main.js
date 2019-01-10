@@ -8,19 +8,35 @@ class Main extends Component {
     }
 
     render() {
-        const index = Math.floor(Math.random() * PhotoData.backgrounds.length - 1);
-        const backgroundImage = PhotoData.backgrounds[index];
-
         return (
             <section className="section"
                      id={AppConstants.SECTIONS.MAIN.ID}
-                     style={{backgroundImage: `url(${backgroundImage})`}}>
-                <div>
-                    This is the Main section.
-                </div>
+                     style={{backgroundImage: `url(${PhotoData.background})`}}>
+                {this._renderTitle()}
             </section>
         )
     }
+
+    /**
+     * Render the name and title on the main section
+     * @returns {*}
+     * @private
+     */
+    _renderTitle() {
+        return (
+            <div>
+                <div>Ivan</div>
+                <div>Puljak</div>
+                <div>Software Developer</div>
+            </div>
+        )
+    }
 }
+
+Main.Constants = {
+    FIRST_NAME: "Ivan",
+    LAST_NAME: "Puljak",
+    TITLE: "Software Developer"
+};
 
 export default Main;
