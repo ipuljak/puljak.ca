@@ -46,7 +46,7 @@ class GalleryPage extends Component {
      * Route the user to the default page if the selected album does not exist
      */
     checkAlbumExists() {
-        if (!PhotoData.find(album => album.id === this.props.match.params.album)) {
+        if (!PhotoData.albums.find(album => album.id === this.props.match.params.album)) {
             History.push(AppConstants.ROUTES.DEFAULT);
         }
     }
