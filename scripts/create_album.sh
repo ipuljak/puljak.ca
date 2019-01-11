@@ -6,20 +6,19 @@ ALBUM_NAME=$2
 COVER_IMAGE=$3
 S3_BUCKET=$4
 
-cd ${ALBUM_PATH}/images
-
-rename 'y/A-Z/a-z/' *
-
 ### RESIZE THE IMAGES
+cd ${ALBUM_PATH}/images
+rename 'y/A-Z/a-z/' *
 mogrify -resize 30% *jpg
 
 ### CREATE THE THUMBNAILS
 mkdir ../thumbnails
 mogrify -path ../thumbnails -format jpg -resize "275x275^" -gravity center -crop 275x275+0+0 +repage *.jpg
 
+### CREATE THE COVER IMAGE
 cd ${ALBUM_PATH}
-
 cp images/${COVER_IMAGE} ${ALBUM_NAME}.jpg
+mogrify -resize "640x" -gravity center -crop 640x358+0+0 +repage ${ALBUM_NAME}.jpg
 
 ### PUBLISH TO S3
 aws s3 sync images s3://${S3_BUCKET}/images/albums/${ALBUM_NAME}/images
