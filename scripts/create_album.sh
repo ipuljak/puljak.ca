@@ -24,7 +24,7 @@ cp images/${COVER_IMAGE} ${ALBUM_NAME}.jpg
 ### PUBLISH TO S3
 aws s3 sync images s3://${S3_BUCKET}/images/albums/${ALBUM_NAME}/images
 aws s3 sync thumbnails s3://${S3_BUCKET}/images/albums/${ALBUM_NAME}/thumbnails
-aws s3 cp ${ALBUM_NAME}.jpg s3://${S3_BUCKET}/images/covers/${ALBUM_NAME}.jpg
+aws s3 cp ${ALBUM_NAME}.jpg s3://${S3_BUCKET}/images/covers/
 
 ### PRINT OUT THE RESULTS
 images=`aws s3 ls s3://${S3_BUCKET}/images/albums/${ALBUM_NAME}/images/ --recursive | awk '{$1=$2=$3=""; print $0}' | sed 's/^[ \t]*//'`
