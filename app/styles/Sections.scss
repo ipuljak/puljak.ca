@@ -4,9 +4,9 @@
   //height: 100vh;
 
   .section-title {
-    font-size: 2em;
-    letter-spacing: 8px;
-    padding: 50px;
+    font-size: 28px;
+    letter-spacing: 7px;
+    padding: 2rem 0;
     text-align: center;
     text-transform: uppercase;
     color: darken($font-color, 5%);
@@ -94,12 +94,14 @@
     border: 1px solid lightgrey;
     border-radius: 3px;
     margin: 25px;
-    padding: 3px;
+    padding: 5px;
     cursor: pointer;
+    background-color: white;
 
     .section-album-cover {
       width: 100%;
       height: 100%;
+      border-radius: 3px;
       -webkit-filter: brightness(100%);
     }
 
