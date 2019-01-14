@@ -9,16 +9,16 @@
     padding: 2rem 0;
     text-align: center;
     text-transform: uppercase;
-    color: darken($font-color, 5%);
+    color: white;
   }
 }
 
 .section:nth-child(even) {
-  background-color: lightgray;
+  background-color: #1A1A1A;
 }
 
 .section:nth-child(odd) {
-  background-color: whitesmoke;
+  background-color: lighten(#1A1A1A, 5%);
 }
 
 // MAIN
@@ -38,7 +38,7 @@
   font-weight: 700;
   color: $dark-color;
   line-height: 1;
-  margin: 0 0 50vh 25vw;
+  margin: 0 0 20vh 15vw;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -68,6 +68,66 @@
       font-size: 18px;
       color: $font-color;
       width: 100px;
+    }
+  }
+}
+
+// BIO
+
+#section-bio {
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: left center;
+  height: 100vh;
+  filter: grayscale(70%) brightness(90%);
+  padding: 50px;
+
+  .bio-container {
+    max-height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+
+    .bio-content {
+      width: 50%;
+      margin: 0 auto;
+      background-color: lighten(#1A1A1A, 5%);
+      opacity: 0.9;
+      color: white;
+      padding: 25px 75px;
+      font-size: 14px;
+      font-weight: 400;
+      border-radius: 3px;
+      text-indent: 30px;
+
+      .bio-title {
+        text-indent: 0;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .bio-signature {
+        font-size: 18px;
+        font-weight: 700;
+        text-align: right;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $medium-break) {
+    padding: 25px;
+
+    .bio-content {
+      width: 90%;
+      padding: 20px 50px;
+    }
+  }
+
+  @media only screen and (max-width: $small-break) {
+    padding: 10px;
+
+    .bio-content {
+      width: 90%;
+      padding: 10px 15px;
     }
   }
 }

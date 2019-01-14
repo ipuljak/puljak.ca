@@ -17,7 +17,7 @@ class HomePage extends Component {
                 <Main />
                 <Bio />
                 <Resume />
-                <Projects />
+                {/*<Projects />*/}
                 <Photos />
             </div>
         )
