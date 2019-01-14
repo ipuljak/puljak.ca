@@ -9,11 +9,7 @@ class Bio extends Component {
 
     render() {
         const index = Math.floor(Math.random() * (PhotoData.dynamicBackgrounds.length));
-        console.log("index is: ", index);
-
         const image = PhotoData.dynamicBackgrounds[index];
-
-        console.log("Image is :", image);
 
         return (
             <section className="section"
@@ -21,7 +17,10 @@ class Bio extends Component {
                      style={{backgroundImage: `url(${image})`}}>
                 <div className="bio-container">
                     <div className="bio-content">
-                        <div className="section-title">About Me</div>
+                        <div className="section-header">
+                            <div className="section-title">About Me</div>
+                            <hr />
+                        </div>
 
                         <p>Hello, and welcome to personal website! My name is Ivan Puljak, and I am a software developer
                             currently working in Toronto, Ontario. In 2009, I graduated from high school as an Ontario

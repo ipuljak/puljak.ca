@@ -11,7 +11,10 @@ class Photos extends Component {
     render() {
         return (
             <section className="section" id={AppConstants.SECTIONS.PHOTOS.ID}>
-                <div className="section-title">Photographs</div>
+                <div className="section-header">
+                    <div className="section-title">Photographs</div>
+                    <hr />
+                </div>
                 <div className="section-album-container">{this.renderPhotoCovers()}</div>
             </section>
         )
