@@ -106,18 +106,21 @@
       font-size: 14px;
       font-weight: 400;
       border-radius: 3px;
-      text-indent: 30px;
 
-      .bio-title {
-        text-indent: 0;
-        font-size: 20px;
-        font-weight: 700;
-      }
+      .bio-text {
+        text-indent: 30px;
 
-      .bio-signature {
-        font-size: 18px;
-        font-weight: 700;
-        text-align: right;
+        .bio-title {
+          text-indent: 0;
+          font-size: 20px;
+          font-weight: 700;
+        }
+
+        .bio-signature {
+          font-size: 18px;
+          font-weight: 700;
+          text-align: right;
+        }
       }
     }
   }
@@ -127,7 +130,7 @@
 
     .bio-content {
       width: 90%;
-      padding: 20px 50px;
+      padding: 20px;
     }
   }
 
@@ -135,8 +138,8 @@
     padding: 10px;
 
     .bio-content {
-      width: 90%;
-      padding: 10px 15px;
+      width: 95%;
+      padding: 10px;
     }
   }
 }
@@ -148,7 +151,6 @@
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 50px;
-  max-height: 80vh;
 }
 
 // PHOTOS
