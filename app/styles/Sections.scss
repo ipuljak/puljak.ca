@@ -146,11 +146,25 @@
 
 // RESUME
 
-.section-resume-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 50px;
+#section-resume {
+  .section-resume-container {
+    height: 100%;
+
+    iframe {
+      display: block;
+      margin: 25px auto 50px;
+      width: 50%;
+      height: 90vh;
+
+      @media only screen and (max-width: $medium-break) {
+        width: 75%;
+      }
+
+      @media only screen and (max-width: $small-break) {
+        width: 90%;
+      }
+    }
+  }
 }
 
 // PHOTOS

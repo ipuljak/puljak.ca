@@ -9,14 +9,12 @@ class Resume extends Component {
     render() {
         return (
             <section className="section" id={AppConstants.SECTIONS.RESUME.ID}>
-                <div className="section-header">
-                    <div className="section-title">Résumé</div>
-                    <hr />
-                </div>
                 <div className="section-resume-container">
-                    <object data="/files/resume.pdf" type="application/pdf" width="70%" height="800px">
-                        <p>It appears you don't have a PDF plugin for this browser. You can <a href="/files/resume.pdf">click here to download the PDF file.</a></p>
-                    </object>
+                    <div className="section-header">
+                        <div className="section-title">Résumé</div>
+                        <hr />
+                    </div>
+                    <iframe src="https://docs.google.com/gview?url=https://puljak.ca/files/resume.pdf&embedded=true" frameBorder="0" />
                 </div>
             </section>
         )
