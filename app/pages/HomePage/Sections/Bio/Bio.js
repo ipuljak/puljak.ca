@@ -23,7 +23,7 @@ class Bio extends Component {
                         </div>
 
                         <div className="bio-text">
-                            <p>Hello, and welcome to personal website! My name is Ivan Puljak, and I am a software developer
+                            <p>Hello, and welcome to my personal website! My name is Ivan Puljak, and I am a software developer
                                 currently working in Toronto, Ontario. In 2009, I graduated from high school as an Ontario
                                 scholar and was later accepted into the University of Toronto. I graduated with an Honours
                                 Bachelor of Science in Computer Science. The highlight of my university experience was in my
@@ -41,24 +41,24 @@ class Bio extends Component {
                                 some time in this role I decided to voluntarily leave to focus on expanding my abilities as a
                                 software developer.</p>
 
-                            <p>In April of 2017, I started my career as a software developer after being hired as a full-stack
+                            <p>In April of 2017, I started my career in technology after being hired as a software
                                 developer for a young ed-tech startup named JoeZoo. JoeZoo provides proof-of-learning and
                                 assessment tools for teachers and students and is currently used by 5 million users and 12
                                 thousand schools across the world. As a core team member, I have worked on many foundational
-                                features and components. I became extremely proficient with React / Javascript on the front-end,
+                                features and components. I became extremely proficient with React / JavaScript on the front-end,
                                 and Grails on the back-end. I also became familiar with our AWS stack learning many new tools
                                 including S3, EC2, Elastic Beanstalk, Elasticsearch, and much more.</p>
 
                             <p>A year later I was promoted to UI Lead, where I was given full responsibility for maintaining and
                                 improving the front-end code bases, as well as reviewing my team's work. During this time I was
                                 also given an opportunity to focus on a side project of my choice, and I decided to pick the
-                                study of natural language programming (NLP). Over the summer I worked on an NLP project where I
-                                built an Originality Checker written in Python and deployed on it's own Flask server as a
-                                microservice. In the future I look forward to working on topic modelling, sentiment analysis,
-                                and much more. I am very lucky to be part of a company where the focus of our work is more than
-                                just pushing out code, it is about becoming a better computer scientist and software engineer.
-                                Whether it's for expanding our vision or tackling on complex problems, there is not a single day
-                                that goes by where I don't learn something new.</p>
+                                study of natural language programming (NLP). Over the summer I built an Originality Checker
+                                written in Python and deployed on it's own Flask server as a microservice. In the future I look
+                                forward to working on topic modelling, sentiment analysis, and much more. I am very lucky to be
+                                part of a company where the focus of our work is more than just pushing out code, it is about
+                                becoming a better computer scientist and software engineer. Whether it's for expanding our
+                                vision or tackling on complex problems, there is not a single day that goes by where I don't
+                                learn something new.</p>
 
                             <p className="bio-title">Volunteer Work & Helping Others</p>
 
@@ -78,16 +78,16 @@ class Bio extends Component {
                             <p>Outside of work and volunteer life, I enjoy many different hobbies. My greatest interest is
                                 working on and riding my motorcycles. For 7 years I enjoyed riding my 2009 Ninja 250r, but last
                                 year I became the proud owner of a brand new Yamaha Bolt. I enjoy nature and photography, and am
-                                very fortunate to live where many hiking trails, parks, and waterfalls just a short drive away.
+                                very fortunate to live where many hiking trails, parks, and waterfalls are just a short drive away.
                                 I also enjoy hobby programming, strategy board & video games, playing softball, jamming away
                                 on my Seagull guitar, and spending time with my wonderful girlfriend.</p>
 
                             <p>Commuting to Toronto daily gives me ample time to get lost in a good book. I especially enjoy
-                                reading classic literature and historical nonfiction, and my favourite authors are Fyodor
-                                Dostoevsky and Pierre Berton. I have a very keen interest in learning and reading about ancient
-                                history and civilizations, especially those in Mesopotamia (Sumer, Akkad, and Babylon) as well
-                                as Ancient Greece. Lately, I have found a greater appreciation for Canadian history and I am
-                                particularly fond the stories of the Canadian Pacific Railway.</p>
+                                reading classic literature and history, and my favourite authors are Fyodor Dostoevsky and
+                                Pierre Berton. I have a very keen interest in learning and reading about ancient history and
+                                civilizations, especially those in Mesopotamia (Sumer, Akkad, and Babylon) as well as Ancient
+                                Greece. Lately, I have found a greater appreciation for Canadian history and I am particularly
+                                fond of the stories of the Canadian Pacific Railway.</p>
 
                             <p>If you'd like to learn more about me, or if you have any questions, please don't hesitate to
                                 contact me!</p>
