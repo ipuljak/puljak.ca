@@ -87,25 +87,25 @@
   background-size:     cover;
   background-repeat:   no-repeat;
   background-position: left center;
-  height: 100vh;
   filter: grayscale(70%) brightness(90%);
-  padding: 50px;
 
   .bio-container {
-    max-height: 100vh;
-    overflow: scroll;
-    overflow-x: hidden;
+    height: 100vh;
+    padding: 25px;
 
     .bio-content {
+      height: 100%;
       width: 50%;
       margin: 0 auto;
       background-color: lighten(#1A1A1A, 5%);
       opacity: 0.9;
       color: white;
-      padding: 25px 75px;
+      padding: 0 50px;
       font-size: 14px;
       font-weight: 400;
-      border-radius: 3px;
+      border-radius: 5px;
+      overflow: scroll;
+      overflow-x: hidden;
 
       .bio-text {
         text-indent: 30px;
@@ -122,24 +122,11 @@
           text-align: right;
         }
       }
-    }
-  }
 
-  @media only screen and (max-width: $medium-break) {
-    padding: 25px;
-
-    .bio-content {
-      width: 90%;
-      padding: 20px;
-    }
-  }
-
-  @media only screen and (max-width: $small-break) {
-    padding: 10px;
-
-    .bio-content {
-      width: 95%;
-      padding: 10px;
+      @media only screen and (max-width: $medium-break) {
+        width: 85%;
+        padding: 0 25px;
+      }
     }
   }
 }
