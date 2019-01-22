@@ -21,6 +21,7 @@ module.exports = {
     },
     resolve: {
         alias: {
+            Actions: path.resolve("./app/actions"),
             Constants: path.resolve("./app/constants"),
             Core: path.resolve("./app/core"),
             Layout: path.resolve("./app/layout"),

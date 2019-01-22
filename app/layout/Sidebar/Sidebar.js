@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import {boundMethod} from "autobind-decorator";
+import UserActions from "Actions/UserActions";
 import AppConstants from "Constants/AppConstants";
+import EventConstants from "Constants/EventConstants";
 import History from "Core/History";
 import "Styles/Sidebar.scss";
 
@@ -13,11 +15,18 @@ class Sidebar extends Component {
 
         this.state = {
             visible: false
-        }
+        };
+
+        UserActions.emitter.addListener(EventConstants.USER.OPEN_SIDEBAR, this.openSidebar);
+        UserActions.emitter.addListener(EventConstants.USER.CLOSE_SIDEBAR, this.closeSidebar);
     }
 
     componentDidMount() {
         this.registerDocumentClickListener();
+    }
+
+    componentWillUnmount() {
+        UserActions.emitter.removeAllListeners();
     }
 
     render() {
@@ -132,6 +141,22 @@ class Sidebar extends Component {
     @boundMethod
     toggleSidebar() {
         this.setState({visible: !this.state.visible});
+    }
+
+    /**
+     * Open the sidebar
+     */
+    @boundMethod
+    openSidebar() {
+        this.setState({visible: true});
+    }
+
+    /**
+     * Close the sidebar
+     */
+    @boundMethod
+    closeSidebar() {
+        this.setState({visible: false});
     }
 
     /**
