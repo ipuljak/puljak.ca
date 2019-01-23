@@ -26,7 +26,8 @@ module.exports = {
             Core: path.resolve("./app/core"),
             Layout: path.resolve("./app/layout"),
             Pages: path.resolve("./app/pages"),
-            Styles: path.resolve("./app/styles")
+            Styles: path.resolve("./app/styles"),
+            Utilities: path.resolve("./app/utilities")
         }
     },
     module: {
