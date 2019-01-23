@@ -1,8 +1,13 @@
 import EventConstants from "Constants/EventConstants";
 
 const UserActionsUtils = {
-    detectSwipe(el, callback) {
-        let touchsurface = el,
+    /**
+     * Swipe detection given an element and callback function
+     * @param element
+     * @param callback
+     */
+    detectSwipe(element, callback) {
+        let touchsurface = element,
             swipedir,
             startX,
             startY,
@@ -13,23 +18,22 @@ const UserActionsUtils = {
             allowedTime = 300,
             elapsedTime,
             startTime,
-            handleswipe = callback || function(swipedir){};
+            handleswipe = callback || (swipedir => {});
 
-        touchsurface.addEventListener('touchstart', function(e) {
+        // User begins to touch the screen
+        touchsurface.addEventListener('touchstart', e => {
             let touchobj = e.changedTouches[0];
-            swipedir = 'none';
-            //dist = 0;
+            swipedir = EventConstants.SWIPE_DIRECTION.NONE;
             startX = touchobj.pageX;
             startY = touchobj.pageY;
             startTime = new Date().getTime();
-            e.preventDefault();
         }, false);
 
-        touchsurface.addEventListener('touchmove', function(e) {
-            e.preventDefault();
-        }, false);
+        // User is dragging across the screen
+        touchsurface.addEventListener('touchmove', e => e.preventDefault(), false);
 
-        touchsurface.addEventListener('touchend', function(e) {
+        // User stops touching the screen
+        touchsurface.addEventListener('touchend', e => {
             let touchobj = e.changedTouches[0];
 
             distX = touchobj.pageX - startX;
@@ -49,7 +53,6 @@ const UserActionsUtils = {
             }
 
             handleswipe(swipedir);
-            e.preventDefault();
         }, false);
     }
 };

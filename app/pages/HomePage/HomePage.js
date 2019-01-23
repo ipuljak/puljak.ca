@@ -15,6 +15,25 @@ class HomePage extends Component {
     }
 
     componentDidMount() {
+        this.registerSwipeEvents();
+    }
+
+    render() {
+        return (
+            <div id="home-page">
+                <Main />
+                <Bio />
+                <Resume />
+                {/*<Projects />*/}
+                <Photos />
+            </div>
+        )
+    }
+
+    /**
+     * Register swipe events to handle opening and closing the sidebar on mobile
+     */
+    registerSwipeEvents() {
         let element = document.getElementById("home-page");
         UserActionsUtils.detectSwipe(element, direction => {
             switch (direction) {
@@ -28,18 +47,6 @@ class HomePage extends Component {
                     return;
             }
         });
-    }
-
-    render() {
-        return (
-            <div id="home-page">
-                <Main />
-                <Bio />
-                <Resume />
-                {/*<Projects />*/}
-                <Photos />
-            </div>
-        )
     }
 }
 

@@ -8,7 +8,8 @@ const EventConstants = {
         UP: "UP",
         RIGHT: "RIGHT",
         DOWN: "DOWN",
-        LEFT: "LEFT"
+        LEFT: "LEFT",
+        NONE: "NONE"
     }
 };
 
