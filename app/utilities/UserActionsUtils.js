@@ -30,7 +30,7 @@ const UserActionsUtils = {
         }, false);
 
         // User is dragging across the screen
-        touchsurface.addEventListener('touchmove', e => e.preventDefault(), false);
+        touchsurface.addEventListener('touchmove', e => {}, false);
 
         // User stops touching the screen
         touchsurface.addEventListener('touchend', e => {

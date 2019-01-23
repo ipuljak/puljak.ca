@@ -99,10 +99,10 @@ class Sidebar extends Component {
                 id: AppConstants.SECTIONS.RESUME.ID,
                 name: AppConstants.SECTIONS.RESUME.NAME
             },
-            {
-                id: AppConstants.SECTIONS.PROJECTS.ID,
-                name: AppConstants.SECTIONS.PROJECTS.NAME
-            },
+            // {
+            //     id: AppConstants.SECTIONS.PROJECTS.ID,
+            //     name: AppConstants.SECTIONS.PROJECTS.NAME
+            // },
             {
                 id: AppConstants.SECTIONS.PHOTOS.ID,
                 name: AppConstants.SECTIONS.PHOTOS.NAME
