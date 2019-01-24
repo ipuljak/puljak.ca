@@ -13,31 +13,33 @@ body {
 .jumbotron {
   color: $light-font-color;
   text-align: right;
-  padding: 0 10%;
+  padding: 25px 10%;
 
   .jumbotron-title {
+    color: white;
+    font-weight: 600;
     font-size: 40px;
-    padding: 75px 50px 25px 50px;
+  }
+
+  .jumbotron-hr {
+    margin: 20px 0 20px auto;
+    width: 150px;
   }
 
   .jumbotron-description {
     display: inline-block;
     max-width: 600px;
     font-size: 16px;
-    padding: 0 50px;
   }
 
   @media only screen and (max-width: $small-break) {
-    padding: 0;
-
     .jumbotron-title {
       font-size: 20px;
-      //padding: 25px;
     }
 
     .jumbotron-description {
       display: inline-block;
-      font-size: 12px;
+      font-size: 13px;
     }
   }
 }
