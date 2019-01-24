@@ -20,7 +20,7 @@ class HomePage extends Component {
 
     render() {
         return (
-            <div id="home-page">
+            <div className="home-page">
                 <Main />
                 <Bio />
                 <Resume />
@@ -34,7 +34,8 @@ class HomePage extends Component {
      * Register swipe events to handle opening and closing the sidebar on mobile
      */
     registerSwipeEvents() {
-        let element = document.getElementById("home-page");
+        let element = document.getElementsByClassName("home-page")[0];
+
         UserActionsUtils.detectSwipe(element, direction => {
             switch (direction) {
                 case EventConstants.SWIPE_DIRECTION.RIGHT:

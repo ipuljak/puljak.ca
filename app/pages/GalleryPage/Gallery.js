@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import {boundMethod} from "autobind-decorator";
 import Lightbox from "react-images";
+import EventConstants from "Constants/EventConstants";
+import UserActionsUtils from "Utilities/UserActionsUtils";
 
 class Gallery extends Component {
     constructor() {
@@ -59,10 +61,12 @@ class Gallery extends Component {
      */
     @boundMethod
     openImage(index) {
+        event.stopPropagation();
+
         this.setState({
             lightboxOpen: true,
             currentImage: index
-        });
+        }, this.registerSwipeEvents);
     }
 
     /**
@@ -70,7 +74,9 @@ class Gallery extends Component {
      */
     @boundMethod
     goToPreviousImage() {
-        this.setState({currentImage: this.state.currentImage - 1});
+        if (this.state.lightboxOpen) {
+            this.setState({currentImage: this.state.currentImage - 1});
+        }
     }
 
     /**
@@ -78,7 +84,9 @@ class Gallery extends Component {
      */
     @boundMethod
     goToNextImage() {
-        this.setState({currentImage: this.state.currentImage + 1});
+        if (this.state.lightboxOpen) {
+            this.setState({currentImage: this.state.currentImage + 1});
+        }
     }
 
     /**
@@ -87,6 +95,28 @@ class Gallery extends Component {
     @boundMethod
     closeLightbox() {
         this.setState({lightboxOpen: false});
+    }
+
+    /**
+     * Register a swipe event for scrolling through images on mobile devices
+     */
+    registerSwipeEvents() {
+        setTimeout(() => {
+            let element = document.getElementById("lightboxBackdrop");
+
+            UserActionsUtils.detectSwipe(element, direction => {
+                switch (direction) {
+                    case EventConstants.SWIPE_DIRECTION.RIGHT:
+                        this.goToPreviousImage();
+                        return;
+                    case EventConstants.SWIPE_DIRECTION.LEFT:
+                        this.goToNextImage();
+                        return;
+                    default:
+                        return;
+                }
+            });
+        }, 50);
     }
 }
 
