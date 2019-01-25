@@ -56,7 +56,7 @@ class Bio extends Component {
                             <p>I also enjoy many different hobbies. I have two motorcycles that I enjoy riding and
                                 working on, a 2015 Yamaha Bolt, and a 2009 Ninja 250r. I enjoy nature and hiking,
                                 photography, hobby programming, board games, playing sports, and jamming away on my
-                                guitar. I also enjoy reading, especially classic literature novels and books and ancient
+                                guitar. I also enjoy reading, especially classic literature novels and books on ancient
                                 civilizations and world history. On the weekends, I also like to pass the time by
                                 helping others and being a part of my community through volunteering at Habitat for
                                 Humanity where I help out at the local ReStore.</p>
