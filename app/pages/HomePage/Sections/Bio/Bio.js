@@ -9,15 +9,17 @@ class Bio extends Component {
 
     componentDidMount() {
         //var src = $('#test').css('background-image');
-        var src = document.getElementById("section-bio");
-        var computedStyle = getComputedStyle(src)["background-image"];
-        var url = computedStyle.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+        const element = document.getElementById(AppConstants.SECTIONS.BIO.ID);
+        const url = getComputedStyle(element)["background-image"];
+        const src = url.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
 
-        var img = new Image();
-        img.onload = function() {
-            alert('image loaded');
+        const img = new Image();
+        img.onload = () => {
+            // TODO - Do something here
         };
-        img.src = url;
+
+        img.src = src;
+
         if (img.complete) img.onload();
     }
 
