@@ -7,21 +7,21 @@ class Bio extends Component {
         super(props);
     }
 
-    componentDidMount() {
-        //var src = $('#test').css('background-image');
-        const element = document.getElementById(AppConstants.SECTIONS.BIO.ID);
-        const url = getComputedStyle(element)["background-image"];
-        const src = url.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
-
-        const img = new Image();
-        img.onload = () => {
-            // TODO - Do something here
-        };
-
-        img.src = src;
-
-        if (img.complete) img.onload();
-    }
+    // componentDidMount() {
+    //     //var src = $('#test').css('background-image');
+    //     const element = document.getElementById(AppConstants.SECTIONS.BIO.ID);
+    //     const url = getComputedStyle(element)["background-image"];
+    //     const src = url.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+    //
+    //     const img = new Image();
+    //     img.onload = () => {
+    //         // TODO - Do something here
+    //     };
+    //
+    //     img.src = src;
+    //
+    //     if (img.complete) img.onload();
+    // }
 
     render() {
         const index = Math.floor(Math.random() * (PhotoData.dynamicBackgrounds.length));
