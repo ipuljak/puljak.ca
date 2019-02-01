@@ -184,7 +184,8 @@ class Sidebar extends Component {
 
         if (element) {
             element.scrollIntoView({
-                behavior: "smooth"
+                behavior: "smooth",
+                block: "start"
             });
         }
 
