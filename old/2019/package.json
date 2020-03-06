@@ -1,0 +1,47 @@
+{
+  "name": "puljak.ca",
+  "version": "1.0.0",
+  "description": "puljak.ca - personal website code repository",
+  "main": "./app/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot --port 63344",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipuljak/puljak.ca.git"
+  },
+  "author": "Ivan Puljak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ipuljak/puljak.ca/issues"
+  },
+  "homepage": "https://github.com/ipuljak/puljak.ca#readme",
+  "dependencies": {
+    "autobind-decorator": "^2.4.0",
+    "axios": "^0.18.0",
+    "flux": "^3.1.3",
+    "history": "^4.7.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-images": "^0.5.19",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-decorators": "^7.2.3",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^2.0.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}

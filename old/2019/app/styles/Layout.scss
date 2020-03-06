@@ -1,0 +1,45 @@
+@import "Variables";
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  color: $font-color;
+}
+
+.main-container {
+  width: 100%;
+}
+
+.jumbotron {
+  color: $light-font-color;
+  text-align: right;
+  margin-bottom: 20px;
+
+  .jumbotron-title {
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+  }
+
+  .jumbotron-hr {
+    margin: 20px 0 20px auto;
+    width: 150px;
+  }
+
+  .jumbotron-description {
+    display: inline-block;
+    max-width: 600px;
+    font-size: 16px;
+  }
+
+  @media only screen and (max-width: $small-break) {
+    .jumbotron-title {
+      font-size: 20px;
+    }
+
+    .jumbotron-description {
+      display: inline-block;
+      font-size: 13px;
+    }
+  }
+}
